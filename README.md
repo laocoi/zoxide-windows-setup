@@ -25,10 +25,8 @@ Hoàn hảo cho ai đang dùng `autojump` muốn chuyển sang zoxide mà giữ 
 Mở **PowerShell** và chạy:
 
 ```powershell
-irm https://raw.githubusercontent.com/<USERNAME>/zoxide-windows-setup/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/laocoi/zoxide-windows-setup/main/install.ps1 | iex
 ```
-
-> Thay `<USERNAME>` bằng GitHub username của bạn sau khi fork/clone repo này.
 
 Lệnh này tải và chạy script `install.ps1`, script này sẽ tự download và chạy `setup-zoxide.ps1`.
 
@@ -36,7 +34,7 @@ Lệnh này tải và chạy script `install.ps1`, script này sẽ tự downloa
 
 ```powershell
 # 1. Clone repo
-git clone https://github.com/<USERNAME>/zoxide-windows-setup.git
+git clone https://github.com/laocoi/zoxide-windows-setup.git
 cd zoxide-windows-setup
 
 # 2. (Lần đầu) Cho phép chạy script

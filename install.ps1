@@ -6,13 +6,13 @@
     Script này tải file setup-zoxide.ps1 từ GitHub và chạy nó.
     Cho phép cài đặt bằng 1 lệnh duy nhất:
 
-    irm https://raw.githubusercontent.com/<USERNAME>/zoxide-windows-setup/main/install.ps1 | iex
+    irm https://raw.githubusercontent.com/laocoi/zoxide-windows-setup/main/install.ps1 | iex
 #>
 
 [CmdletBinding()]
 param(
     [string]$Branch = "main",
-    [string]$Repo = "<USERNAME>/zoxide-windows-setup"
+    [string]$Repo = "laocoi/zoxide-windows-setup"
 )
 
 $ErrorActionPreference = "Stop"
