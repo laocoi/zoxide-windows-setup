@@ -25,14 +25,13 @@ Write-Host ""
 
 # Download script chính
 $scriptUrl = "https://raw.githubusercontent.com/$Repo/$Branch/setup-zoxide.ps1"
-$tempScript = Join-Path $env:TEMP "setup-zoxide-$([guid]::NewGuid().ToString('N')).ps1"
 
 Write-Host "Đang tải setup script từ:" -ForegroundColor Yellow
 Write-Host "  $scriptUrl" -ForegroundColor Gray
 Write-Host ""
 
 try {
-    Invoke-WebRequest -Uri $scriptUrl -OutFile $tempScript -UseBasicParsing
+    $scriptContent = (Invoke-WebRequest -Uri $scriptUrl -UseBasicParsing).Content
     Write-Host "✓ Tải xong" -ForegroundColor Green
     Write-Host ""
 } catch {
@@ -45,10 +44,5 @@ try {
     exit 1
 }
 
-# Chạy script
-try {
-    & $tempScript @PSBoundParameters
-} finally {
-    # Dọn dẹp file tạm
-    Remove-Item $tempScript -ErrorAction SilentlyContinue
-}
+# Chạy script qua Invoke-Expression để tránh ExecutionPolicy chặn file .ps1 trên đĩa
+Invoke-Expression $scriptContent
