@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C F:/htdocs/zoxide-windows-setup status)",
+      "Bash(git -C F:/htdocs/zoxide-windows-setup log --oneline -5)",
+      "Bash(git -C F:/htdocs/zoxide-windows-setup remote -v)",
+      "Bash(git -C F:/htdocs/zoxide-windows-setup show HEAD --stat)",
+      "Bash(git -C F:/htdocs/zoxide-windows-setup log --oneline origin/main -5)",
+      "Bash(git -C F:/htdocs/zoxide-windows-setup fetch origin)",
+      "Bash(git -C F:/htdocs/zoxide-windows-setup show origin/main:install.ps1)"
+    ]
+  }
+}
